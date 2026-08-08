@@ -1,3 +1,52 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#projectqheader {
+    text-align: center;
+    font-size: 35px;
+    margin: 20px 0px 0px 0px;
+    background-color: red;
+    /* colors are just placeholders for now */
+}
+
+#cardcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
 #gridparent {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 95px;
+
+    justify-content: center;
+
+}
+
+.card {
+    background-color: #fa3333;
+    border-radius: 30px;
+    width: 340px;
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+
+    transition: transform 0.15s ease;   
+}
+
+.card:hover{
+    transform: scale(110%);
+    
+}
+.image{
+    width: 100px;
+    height: 100px;
 }
