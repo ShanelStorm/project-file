@@ -8,13 +8,30 @@
 #projectqheader {
     text-align: center;
     font-size: 35px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(133, 110, 133);
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #b89ee9;
+    background-image: url("images/cardboardbg.jpg");
+
+    width: 100%;
+    height: 160px;
+
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+
     padding-bottom: 20px;
     /* colors are just placeholders for now */
 }
 
+h1 {
+    position: absolute;
+    top: 18px;
+    left: 39.5%;
+    
+}
+
 body{
+    background-color: #e2c2fd;
+    background-image: url("images/warmpaper.png");
     background-repeat: repeat;
     height: 100vh;
 }
@@ -40,12 +57,16 @@ body{
 }
 
 .card {
-    background-color: #fa3333;
+    background-color: white;
     border-radius: 30px;
+    
+    
+
     width: 380px;
     height: 240px;
     text-align: center;
     overflow: hidden;
+    box-shadow: 7px 8px 10px rgba(9, 9, 34, 0.5);
 
     transition: transform 0.15s ease;   
 }
@@ -54,6 +75,7 @@ body{
     transform: scale(110%);
     
 }
+
 .image{
     height: 140px;
 
@@ -63,4 +85,9 @@ body{
         object-fit: cover;
         
     }
+}
+
+a {
+    color:black;
+    text-decoration: none;
 }
