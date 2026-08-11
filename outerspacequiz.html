@@ -3,9 +3,492 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project Q - Outer Space Quiz</title>
 </head>
+
+<style>
+  * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #first_screen{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow:auto;
+    background-image: url(images/spaceim3k.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+
+
+  }
+
+  #headerparent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #headerdiv{
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 5px;
+    width: 300px;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 20px;
+
+
+
+  }
+
+  .total{
+    margin: 10px 100px 0px 130px;
+    background-color: rgba(255, 255, 255, 0.459);
+  }
+
+
+  
+
+  
+
+
+</style>
+
+
+
+
 <body>
+
+<div id="first_screen" class="visible">
+
+    <div id="headerparent">
+    <div id="headerdiv">
+    <h1>Outer Space Quiz</h1>
+    </div>
+    </div>
+
+
+<div id="q1_total" class="total">
+
+  <div class="questiondiv">
+  <span><strong>1. Which planet has the shortest day in our Solar System?</strong></span>
+  </div>
+
+  <div id="q1_answers" class="answer_container">
+
+    <label for="q1_a1">
+      <div id="q1_a1_div" class="answer">
+        <input type="radio" id="q1_a1" name="q1_option">
+        <span>Earth</span>
+      </div>
+    </label>
+
+    <label for="q1_a2">
+      <div id="q1_a2_div" class="answer">
+        <input type="radio" id="q1_a2" name="q1_option">
+        <span>Jupiter</span>
+      </div>
+    </label>
+
+    <label for="q1_a3">
+      <div id="q1_a3_div" class="answer">
+        <input type="radio" id="q1_a3" name="q1_option">
+        <span>Mercury</span>
+      </div>
+    </label>
+
+    <label for="q1_a4">
+      <div id="q1_a4_div" class="answer">
+        <input type="radio" id="q1_a4" name="q1_option">
+        <span>Neptune</span>
+      </div>
+    </label>
+
+  </div>
+
+</div>
+
+
+<div id="q2_total" class="total">
+
+  <div class="questiondiv">
+  <span><strong>2. What is a light-year used to measure?</strong></span>
+  </div>
+
+  <div id="q2_answers" class="answer_container">
+
+  <label for="q2_a1">
+    <div id="q2_a1_div" class="answer">
+      <input type="radio" id="q2_a1" name="q2_option">
+      <span>Time</span>
+    </div>
+  </label>
+
+  <label for="q2_a2">
+  <div id="q2_a2_div" class="answer">
+    <input type="radio" id="q2_a2" name="q2_option">
+    <span>Temperature</span>
+  </div>
+  </label>
+
+  <label for="q2_a3">
+  <div id="q2_a3_div" class="answer">
+    <input type="radio" id="q2_a3" name="q2_option">
+    <span>Distance</span>
+  </div>
+  </label>
+
+  <label for="q2_a4">
+  <div id="q2_a4_div" class="answer">
+    <input type="radio" id="q2_a4" name="q2_option">
+    <span>Speed</span>
+  </div>
+  </label>
+
+  </div>
+</div>
+
+
+<div id="q3_total" class="total">
+
+  <div class="questiondiv">
+  <div id="q3_answers" class="answer_container">
+  </div>
+
+  <span><strong>3. Which planet has the strongest winds in the Solar System?</strong></span>
+
+  <label for="">
+    <div id="q3_a1_div" class="answer">
+      <input type="radio" id="q3_a1" name="q3_option">
+      <span>Jupiter</span>
+    </div>
+  </label>
+
+  <label for="q3_a2">
+    <div id="q3_a2_div" class="answer">
+      <input type="radio" id="q3_a2" name="q3_option">
+      <span>Saturn</span>
+    </div>
+  </label>
+
+  <label for="q3_a3">
+    <div id="q3_a3_div" class="answer">
+      <input type="radio" id="q3_a3" name="q3_option">
+      <span>Neptune</span>
+    </div>
+  </label>
+
+  <label for="q3_a4">
+    <div id="q3_a4_div" class="answer">
+      <input type="radio" id="q3_a4" name="q3_option">
+      <span>Uranus</span>
+    </div>
+  </label>
+
+  </div>
+</div>
+
+
+<div id="q4_total" class="total">
+
+  <div class="questiondiv">
+  <span><strong>4. Which type of star explosion can occur when a massive star reaches the end of its life?</strong></span>
+  </div>
+
+
+  <div id="q4_answers" class="answer_container">
+
+  <label for="q4_a1">
+    <div id="q4_a1_div" class="answer">
+      <input type="radio" id="q4_a1" name="q4_option">
+      <span>Aurora</span>
+    </div>
+  </label>
+
+  <label for="q4_a2">
+    <div id="q4_21_div" class="answer">
+      <input type="radio" id="" name="q4_option">
+      <span>Solar Flare</span>
+    </div>
+  </label>
+
+  <label for="q4_a3">
+    <div id="q4_a3_div" class="answer">
+      <input type="radio" id="q4_a3" name="q4_option">
+      <span>Supernova</span>
+    </div>
+  </label>
+
+  <label for="q4_a4">
+    <div id="q4_a4" class="answer">
+      <input type="radio" id="q4_a4" name="q4_option">
+      <span>Eclipse</span>
+    </div>
+  </label>
+
+ </div>
+</div>
+
+
+<div id="q5_total" class="total">
+
+  <div class="questiondiv">
+  <span><strong>5. Which planet currently has the most confirmed moons?</strong></span>
+  </div>
+
+  <div id="q5_answers" class="answer_container">
+
+  <label for="">
+    <div id="q5_a1_div" class="answer">
+      <input type="radio" id="q5_a1" name="q5_option">
+      <span>Saturn</span>
+    </div>
+  </label>
+
+  <label for="q5_a2">
+    <div id="q5_a2_div" class="answer">
+      <input type="radio" id="q5_a2" name="q5_option">
+      <span>Neptune</span>
+    </div>
+  </label>
+
+  <label for="q5_a3">
+    <div id="q5_a3_div" class="answer">
+      <input type="radio" id="q5_a3" name="q5_option">
+      <span>Uranus</span>
+    </div>
+  </label>
+
+  <label for="q5_a4">
+    <div id="q5_a4_div" class="answer">
+      <input type="radio" id="q5_a4" name="q5_option">
+      <span>Jupiter</span>
+    </div>
+  </label>
+
+ </div>
+</div>
+
+
+<div id="q6_total" class="total">
+
+  <div class="questiondiv">
+  <span><strong>6. What is a star primarily made of?</strong></span>
+  </div>
+
+  <div id="q6_answers" class="answer_container">
+
+  <label for="q6_a1">
+    <div id="q6_a1_div" class="answer">
+      <input type="radio" id="q6_a1" name="q6_option">
+      <span>Rock and metal</span>
+    </div>
+  </label>
+
+  <label for="q6_a2">
+    <div id="q6_a2_div" class="answer">
+      <input type="radio" id="q6_a2" name="q6_option">
+      <span>Hydrogen and Helium</span>
+    </div>
+  </label>
+
+  <label for="q6_a3">
+    <div id="q6_a3_div" class="answer">
+      <input type="radio" id="q6_a3" name="q6_option">
+      <span>Oxygen and Nitrogen</span>
+    </div>
+  </label>
+
+  <label for="q6_a4">
+    <div id="q6_a4_div" class="answer">
+      <input type="radio" id="q6_a4" name="q6_option">
+      <span>Ice and Vapour</span>
+    </div>
+  </label>
+
+</div>
+</div>
+
+
+<div id="q7_total" class="total">
+
+  <div class="questiondiv">
+  <span><strong>7. Which planet has the most extensive ring system?</strong></span>
+  </div>
+
+  <div id="q7_answers" class="answer_container">
+
+  <label for="q7_a1">
+    <div id="q7_a1_div" class="answer">
+      <input type="radio" id="q7_a1" name="q7_option">
+      <span>Jupiter</span>
+    </div>
+  </label>
+
+  <label for="q7_a2">
+    <div id="q7_a2_div" class="answer">
+      <input type="radio" id="q7_a2" name="q7_option">
+      <span>Uranus</span>
+    </div>
+  </label>
+
+  <label for="q7_a2">
+    <div id="q7_a2_div" class="answer">
+      <input type="radio" id="q7_a3" name="q7_option">
+      <span>Saturn</span>
+    </div>
+  </label>
+
+  <label for="q7_a4">
+    <div id="q7_a4_div" class="answer">
+      <input type="radio" id="q7_a4" name="q7_option">
+      <span>Neptune</span>
+    </div>
+  </label>
+
+</div>
+</div>
+
+
+<div id="q8_total" class="total">
+
+  <div class="questiondiv">
+  <span><strong>8. What is the name of the boundary around a black hole beyond which nothing can escape?</strong></span>
+  </div>
+
+
+  <div id="q8_answers" class="answer_container">
+
+  <label for="q8_a1">
+    <div id="q8_a1_div" class="answer">
+      <input type="radio" id="q8_a1" name="q8_option">
+      <span>Event Horizon</span>
+    </div>
+  </label>
+
+  <label for="q8_a2">
+    <div id="q8_a2_div" class="answer">
+      <input type="radio" id="q8_a2" name="q8_option">
+      <span>Photon Belt</span>
+    </div>
+  </label>
+
+  <label for="q8_a3">
+    <div id="q8_a3_div" class="answer">
+      <input type="radio" id="q8_a3" name="q8_option">
+      <span>Singularity</span>
+    </div>
+  </label>
+
+  <label for="q8_a4">
+    <div id="q8_a4_div" class="answer">
+      <input type="radio" id="q8_a4" name="q8_option">
+      <span>Gravity Wall</span>
+    </div>
+  </label>
+
+</div>
+</div>
+
+
+<div id="q7_total" class="total">
+
+  <div class="questiondiv">
+  <span><strong>9. Which planet is tilted so dramatically that it essentially rotates on its side?</strong></span>
+  </div>
+
+  <div id="q9_answers" class="answer_container">
+
+  <label for="q9_a1">
+    <div id="q9_a1_div" class="answer">
+      <input type="radio" id="q9_a1" name="q9_option">
+      <span>Neptune</span>
+    </div>
+  </label>
+
+  <label for="q9_a2">
+    <div id="q9_a2_div" class="answer">
+      <input type="radio" id="q9_a2" name="q9_option">
+      <span>Uranus</span>
+    </div>
+  </label>
+
+  <label for="q9_a3">
+    <div id="q9_a3_div" class="answer">
+      <input type="radio" id="q9_a3" name="q9_option">
+      <span>Saturn</span>
+    </div>
+  </label>
+
+  <label for="q9_a4">
+    <div id="option36_div" class="answer">
+      <input type="radio" id="q9_a4" name="q9_option">
+      <span>Venus</span>
+    </div>
+  </label>
+
+</div>
+</div>
+
+
+<div id="q10_total" class="total">
+
+  <div class="questiondiv">
+  <span><strong>10. Which spacecraft has traveled the farthest from Earth?</strong></span>
+  </div>
+
+  <div id="q10_answers" class="answer_container">
+
+  <label for="q10_a1">
+    <div id="q10_a1_div" class="answer">
+      <input type="radio" id="q10_a1" name="q10_option">
+      <span>Voyager 1</span>
+    </div>
+  </label>
+
+  <label for="q10_a2">
+    <div id="q10_a2_div" class="answer">
+      <input type="radio" id="q10_a2" name="q10_option">
+      <span>Apollo 11</span>
+    </div>
+  </label>
+
+  <label for="q10_a3">
+    <div id="q10_a3_div" class="answer">
+      <input type="radio" id="q10_a3" name="q10_option">
+      <span>New Horizons</span>
+    </div>
+  </label>
+
+  <label for="q10_a4">
+    <div id="q10_a4_div" class="answer">
+      <input type="radio" id="q10_a4" name="q10_option">
+      <span>Hubble Space Telescope</span>
+    </div>
+  </label>
+
+ </div>
+
+</div>
+</div>
+
+<!----------------------------------------------------next pg------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+<script>
+
+</script>
     
 </body>
 </html>
