@@ -24,7 +24,9 @@
 }
 
 h1 {
-    position: absolute;
+    /* position: absolute; */
+    text-align: center;
+    margin-top: -150px;
     top: 18px;
     left: 39.5%;
     

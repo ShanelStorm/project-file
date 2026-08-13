@@ -17,15 +17,19 @@
     display: none;
   }
 
+  body{
+    background-image: url(images/spaceim3k.jpg);
+    background-repeat: no-repeat;
+
+  }
+
   #first_screen{
     display: flex;
     flex-direction: column;
     height: 100vh;
     overflow:auto;
-    background-image: url(images/spaceim3k.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
+    /* background-size: cover; */
 
 
   }
@@ -50,11 +54,20 @@
   }
 
   .total{
+    display: flex;
+    flex-direction: column;
     margin: 10px 100px 0px 130px;
     background-color: rgba(255, 255, 255, 0.459);
   }
 
-
+  #submit_button{
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
   
 
   
@@ -67,14 +80,16 @@
 
 <body>
 
-<div id="first_screen" class="visible">
-
+  <div>
     <div id="headerparent">
     <div id="headerdiv">
     <h1>Outer Space Quiz</h1>
     </div>
     </div>
+  </div>
 
+
+<div id="first_screen" class="visible">
 
 <div id="q1_total" class="total">
 
@@ -479,7 +494,7 @@
 
 </div>
 </div>
-
+<button id="submit_button"></button>
 <!----------------------------------------------------next pg------------------------------------------------------------------------------------------------------->
 
 

@@ -6,6 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+<style>
+    #submit_button{
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
+</style>
 <h1>Animal Facts</h1>
 
     1<span><strong>How does a platapus have children?</strong></span>
@@ -101,7 +111,7 @@
             <span>B</span><input type="radio" id="option22" name="question6">6
         </div>
         <div class="answer">
-            <span>C</span><input type="radio" id="option23" name="question6">4
+            <span>C</span><input type="radio" id="option23" name="question6">8
         </div>
         <div class="answer">
             <span>D</span><input type="radio" id="option24" name="question6">9
@@ -176,7 +186,34 @@
         </div>
     </div>
     <br>
-    <button id="submit_button"></button>
-    
+    <button id="submit_button" onclick="CheckAnswers()">FINISH!!!</button>
+    <script>
+        function CheckAnswers() {
+
+    const CorrectAnswers = [
+        "option2",
+        "option6",
+        "option10",
+        "option15",
+        "option19",
+        "option23",
+        "option26",
+        "option30",
+        "option36",
+        "option40",
+    ];
+
+    let score = 0
+
+    CorrectAnswers.forEach(id => {
+        const radio = document.getElementById(id);
+        if (radio && radio.checked) {
+            score++;
+        }
+    })
+
+   alert("Scored" + score + "/10")
+}
+    </script>
 </body>
 </html>

@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Q - Video Game Quiz</title>
 </head>
+<style>
+    #submit_button{
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
+</style>
 <body>
+ 
     <h1>Video Game Quiz</h1>
     
     1 <span><strong>Which of the following characters is Mario's brother?</strong></span>
@@ -63,6 +74,7 @@
         </div>
         <div class="answer">
             <span>B</span> <input type="radio" id="ans4" name="question #14">Diamonds
+        </div>
         <div class="answer">
             <span>C</span> <input type="radio" id="ans15" name="question #15">Coal
         </div>
@@ -154,18 +166,57 @@
 10 <span><strong>Which of the following game developers made the song Megalovania?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans1" name="question #1">Atlus
+            <span>A</span> <input type="radio" id="ans37" name="question #37">Atlus
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans2" name="question #2">Santa Monica Studios
+            <span>B</span> <input type="radio" id="ans38" name="question #38">Santa Monica Studios
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans3" name="question #3">Toby Fox
+            <span>C</span> <input type="radio" id="ans39" name="question #39">Toby Fox
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans4" name="question #4">Bethesda
+            <span>D</span> <input type="radio" id="ans40" name="question #40">Bethesda
         </div>
     </div>
     <br>
+    <button id="submit_button" onclick="CheckAnswers()"></button>
+
+
+
+<script>
+function CheckAnswers() {
+
+    const CorrectAnswers=[
+        "ans2",
+        "ans8",
+        "ans11",
+        "ans13",
+        "ans18",
+        "ans23",
+        "ans28",
+        "ans30",
+        "ans33",
+        "ans39",
+
+
+    ]
+
+ let score = 0
+
+    CorrectAnswers.forEach(id => {
+        const radio = document.getElementById(id);
+        if (radio && radio.checked) {
+            score++;
+        }
+    })
+
+   alert("Scored" + score + "/10")
+
+}
+
+
+</script>
+
+
 </body>
 </html>

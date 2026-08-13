@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Q - Comic Book Quiz</title>
 </head>
+<style>
+  #submit_button{
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
+  .body{
+    background-image: url(images/comicbookREAL.jpeg);
+    background-repeat: no-repeat;
+  }
+</style>
 <body>
     1<span><strong>Which of the following charcters were created by Marvel(Stan Lee)</strong></span>
     <div class="answer_container">
@@ -88,13 +102,13 @@
     6<span><strong>When Steve Rodgers became Captain America, he was given his sheild. What was that sheild made out of?</strong></span>
     <div>
       <div class="answer">
-        <span>A</span><input type="radio" id="option 21" name="question6">V9
+        <span>A</span><input type="radio" id="option 21" name="question6">Stainless Steel
       </div>
       <div class="answer">
-        <span>B</span><input type="radio" id="option22" name="question6">Super Soilder Serum
+        <span>B</span><input type="radio" id="option22" name="question6">Vibranium
       </div>
       <div class="answer">
-        <span>C</span><input type="radio" id="option23" name="question6">Compound V
+        <span>C</span><input type="radio" id="option23" name="question6">Nanotech
       </div>
       <div class="answer">
         <span>D</span><input type="radio" id="option24" name="question6">Kryptonite
@@ -165,5 +179,195 @@
         <span>D</span><input type="radio" id="option40" name="question10">Clark
       </div>
     </div>
+    <button id="submit_button" onclick="checkAnswers()">FINISH!!!</button>
 </body>
+
+<script>
+
+let question1_answers = ["Dr.Doom", " Captain Marvel", "Quick Silver" ];
+
+function checkAnswers(){
+
+// document.getElementsByName("q10_option");
+let score = 0;
+let question1_submissions = document.getElementsByName("question1");
+
+for (let i=0; i<10; i++){
+  if(question1_submissions[i].value === question1_answers[i]){
+    score++;
+
+
+  }
+
+}
+
+}
+let question2_answers = ["The Justice Leauge"];
+
+function checkAnswers(){
+
+// document.getElementsByName("q10_option");
+let score = 0;
+let question2_submissions = document.getElementsByName("question2");
+
+for (let i=0; i<10; i++){
+  if(question2_submissions[i].value === question2_answers[i]){
+    score++;
+
+
+  }
+
+}
+
+}
+let question3_answers = ["The X MEN"];
+
+function checkAnswers(){
+
+// document.getElementsByName("q10_option");
+let score = 0;
+let question3_submissions = document.getElementsByName("question3");
+
+for (let i=0; i<10; i++){
+  if(question3_submissions[i].value === question3_answers[i]){
+    score++;
+
+
+  }
+
+}
+
+}
+let question4_answers = ["Jason Todd"];
+
+function checkAnswers(){
+
+// document.getElementsByName("q10_option");
+let score = 0;
+let question4_submissions = document.getElementsByName("question4");
+
+for (let i=0; i<10; i++){
+  if(question4_submissions[i].value === question4_answers[i]){
+    score++;
+
+
+  }
+
+}
+
+}
+
+let question5_answers = ["Superman"];
+
+function checkAnswers(){
+
+// document.getElementsByName("q10_option");
+let score = 0;
+let question5_submissions = document.getElementsByName("question5");
+
+for (let i=0; i<10; i++){
+  if(question5_submissions[i].value === question5_answers[i]){
+    score++;
+
+
+  }
+
+}
+
+}
+let question6_answers = ["Vibranium"];
+
+function checkAnswers(){
+
+// document.getElementsByName("q10_option");
+let score = 0;
+let question6_submissions = document.getElementsByName("question6");
+
+for (let i=0; i<10; i++){
+  if(question6_submissions[i].value === question6_answers[i]){
+    score++;
+
+
+  }
+
+}
+
+}
+let question7_answers = ["Vibranium"];
+
+function checkAnswers(){
+
+// document.getElementsByName("q10_option");
+let score = 0;
+let question7_submissions = document.getElementsByName("question7");
+
+for (let i=0; i<10; i++){
+  if(question7_submissions[i].value === question7_answers[i]){
+    score++;
+
+
+  }
+
+}
+
+}
+let question8_answers = ["Symbiote"];
+
+function checkAnswers(){
+
+// document.getElementsByName("q10_option");
+let score = 0;
+let question8_submissions = document.getElementsByName("question8");
+
+for (let i=0; i<10; i++){
+  if(question8_submissions[i].value === question8_answers[i]){
+    score++
+
+
+  }
+
+}
+
+}
+let question9_answers = ["Kryptonite"];
+
+function checkAnswers(){
+
+// document.getElementsByName("q10_option");
+let score = 0;
+let question9_submissions = document.getElementsByName("question9");
+
+for (let i=0; i<10; i++){
+  if(question9_submissions[i].value === question9_answers[i]){
+    score++
+
+
+  }
+
+}
+
+}
+let question10_answers = ["Arthur"];
+
+function checkAnswers(){
+
+// document.getElementsByName("q10_option");
+let score = 0;
+let question10_submissions = document.getElementsByName("question10");
+
+for (let i=0; i<10; i++){
+  if(question10_submissions[i].value === question10_answers[i]){
+    score++
+
+
+  }
+
+}
+
+}
+
+  
+</script>
+
+
 </html>

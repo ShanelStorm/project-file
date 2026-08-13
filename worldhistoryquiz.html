@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Q - World Wars History Quiz</title>
 </head>
+<style>
+    #submit_button{
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
+</style>
 <body>
     <h1>World Wars History Quiz</h1>
     
@@ -177,6 +187,43 @@
         </div>
     </div>
     <br>
+<button id="submit_button" onclick="CheckAnswers()"></button>
+
+
+<script>
+function CheckAnswers() {
+
+    const CorrectAnswers = [
+        "ans3",
+        "ans6",
+        "ans11",
+        "ans15",
+        "ans18",
+        "ans22",
+        "ans26",
+        "ans30",
+        "ans34",
+        "ans38",
+    ];
+
+    let score = 0
+
+    CorrectAnswers.forEach(id => {
+        const radio = document.getElementById(id);
+        if (radio && radio.checked) {
+            score++;
+        }
+    })
+
+   alert("Scored" + score + "/10")
+}
+
+
+
+
+
+
+</script>
 
 </body>
 </html>

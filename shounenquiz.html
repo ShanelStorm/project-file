@@ -8,9 +8,20 @@
 </head>
 
 <style>
-
-
-</style>
+#submit_button{
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    color: rgb(90, 33, 33);
+    font-weight: bold;
+  }
+  .body{
+    background-image: url(images/animebackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  </style>
 
 
 <body>
@@ -234,7 +245,7 @@
 <div id="q6_total" class="total">
 
   <div class="questiondiv">
-  <span><strong>6. In the anime "Naruto", what is Naruto Uzumaki's signature technique?</strong></span>
+  <span><strong>6. In the anime "Bleach", who ends up marrying the protagonist, Ichigo Kurosaki.</strong></span>
   </div>
 
   <div id="q6_answers" class="answer_container">
@@ -242,28 +253,28 @@
   <label for="q6_a1">
     <div id="q6_a1_div" class="answer">
       <input type="radio" id="q6_a1" name="q6_option">
-      <span>Rasengan</span>
+      <span>Orihime Inoue</span>
     </div>
   </label>
 
   <label for="q6_a2">
     <div id="q6_a2_div" class="answer">
       <input type="radio" id="q6_a2" name="q6_option">
-      <span>Chidori</span>
+      <span>Rukia Kuchiki</span>
     </div>
   </label>
 
   <label for="q6_a3">
     <div id="q6_a3_div" class="answer">
       <input type="radio" id="q6_a3" name="q6_option">
-      <span>Amaterasu</span>
+      <span>Renji Abarai</span>
     </div>
   </label>
 
   <label for="q6_a4">
     <div id="q6_a4_div" class="answer">
       <input type="radio" id="q6_a4" name="q6_option">
-      <span>Shadow Possession</span>
+      <span>Yuzu Kurosaki</span>
     </div>
   </label>
 
@@ -407,28 +418,28 @@
 
   <label for="q10_a1">
     <div id="q10_a1_div" class="answer">
-      <input type="radio" id="q10_a1" name="q10_option">
+      <input type="radio" id="q10_a1" name="q10_option" value="Super Saiyan">
       <span>Super Saiyan</span>
     </div>
   </label>
 
   <label for="q10_a2">
     <div id="q10_a2_div" class="answer">
-      <input type="radio" id="q10_a2" name="q10_option">
+      <input type="radio" id="q10_a2" name="q10_option" value="Bankai">
       <span>Bankai</span>
     </div>
   </label>
 
   <label for="q10_a3">
     <div id="q10_a3_div" class="answer">
-      <input type="radio" id="q10_a3" name="q10_option">
+      <input type="radio" id="q10_a3" name="q10_option" value="Gear 5">
       <span>Gear 5</span>
     </div>
   </label>
 
   <label for="q10_a4">
     <div id="q10_a4_div" class="answer">
-      <input type="radio" id="q10_a4" name="q10_option">
+      <input type="radio" id="q10_a4" name="q10_option" value="Eight Gates">
       <span>Eight Gates</span>
     </div>
   </label>
@@ -437,12 +448,32 @@
 
 </div>
 
-<!------------------------------------------------------------Q10 End---------------------------------------------------------------------------------------------------------->
 
+<!------------------------------------------------------------Q10 End---------------------------------------------------------------------------------------------------------->
+<input id="submit_button" type="button" value="submit" onclick="check_q10_answers">
 
 
 <script> 
+// in the array the answer going down in the array 
 
+let shounen_quiz_answers = ["One Piece, Naruto, Bleach", "Gohan", "Eiichiro Oda", "Quirks", "Yuji Itadori", "Orehime Inoue","Straw Hat Pirates", "Limitless","Izuku Midoriya", "Super Saiyan"];
+
+function check_q10_answers(){
+
+// document.getElementsByName("q10_option");
+let score = 0;
+let q10_submissions = document.getElementsByName("q10_option");
+
+for (let i=0; i<10; i++){
+  if(q10_submissions[i].value === shounen_quiz_answers[i]){
+    score+1;
+
+  }
+}
+
+alert(score);
+
+}
 
 </script>
 
