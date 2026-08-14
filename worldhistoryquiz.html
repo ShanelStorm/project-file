@@ -6,13 +6,49 @@
     <title>Project Q - World Wars History Quiz</title>
 </head>
 <style>
-    #submit_button{
+    body {
+        background-color: #f2e9d0; 
+        font-family: "Georgia", serif;
+        color: #2b2b2b;
+        padding: 20px;
+    }
+
+    h1 {
+        font-family: "Georgia", serif;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #3b3b3b;
+        text-shadow: 1px 1px 0px #c9c2b3;
+    }
+
+    .answer.container {
+        background-color: #e0d6b5;
+        border: 2px solid #8a7f6a;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .answer {
+        padding: 5px 0;
+        font-size: 18px;
+    }
+    
+    #submit_button {
+    background-colour: #6b5f4c;
     border-radius: 8px;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
     color: white;
     font-weight: bold;
+    display: block;
+    margin: 30px auto;
+    cursor: pointer;
+    }
+    #submit_button:hover {
+    background-color: #4f4638;
   }
 </style>
 <body>
@@ -24,13 +60,13 @@
             <span>A</span> <input type="radio" id="ans1" name="question #1">The invasion of Belgium
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans2" name="question #2">The sinking of the Lusitania
+            <span>B</span> <input type="radio" id="ans2" name="question #1">The sinking of the Lusitania
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans3" name="question #3">The assassination of Archduke Franz Ferdinand
+            <span>C</span> <input type="radio" id="ans3" name="question #1">The assassination of Archduke Franz Ferdinand
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans4" name="question #4">The bombing of London
+            <span>D</span> <input type="radio" id="ans4" name="question #1">The bombing of London
         </div>
     </div>
     <br>
@@ -38,16 +74,16 @@
     2 <span><strong>Which countries made up the Central Powers in World War I?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans5" name="question #5">Britain, France, Russia
+            <span>A</span> <input type="radio" id="ans5" name="question #2">Britain, France, Russia
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans6" name="question #6">Germany, Austria-Hungary, Ottoman Empire
+            <span>B</span> <input type="radio" id="ans6" name="question #2">Germany, Austria-Hungary, Ottoman Empire
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans7" name="question #7">USA, Italy, Japan
+            <span>C</span> <input type="radio" id="ans7" name="question #2">USA, Italy, Japan
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans8" name="question #8">Germany, Italy, Japan
+            <span>D</span> <input type="radio" id="ans8" name="question #2">Germany, Italy, Japan
         </div>
     </div>
     <br>
@@ -55,16 +91,16 @@
     3 <span><strong>What year did World War II begin?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans9" name="question #9">1937
+            <span>A</span> <input type="radio" id="ans9" name="question #3">1937
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans10" name="question #10">1938
+            <span>B</span> <input type="radio" id="ans10" name="question #3">1938
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans11" name="question #11">1939
+            <span>C</span> <input type="radio" id="ans11" name="question #3">1939
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans12" name="question #12">1940
+            <span>D</span> <input type="radio" id="ans12" name="question #3">1940
         </div>
     </div>
     <br>
@@ -72,16 +108,16 @@
     4 <span><strong>Which country was invaded by Germany to officially start WWII?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans13" name="question #13">France
+            <span>A</span> <input type="radio" id="ans13" name="question #4">France
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans14" name="question #14">Belgium
+            <span>B</span> <input type="radio" id="ans14" name="question #4">Belgium
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans15" name="question #15">Poland
+            <span>C</span> <input type="radio" id="ans15" name="question #4">Poland
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans16" name="question #16">Denmark
+            <span>D</span> <input type="radio" id="ans16" name="question #4">Denmark
         </div>
     </div>
     <br>
@@ -89,16 +125,16 @@
     5 <span><strong>What was the name of the Allied invasion of Normandy in 1944?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans17" name="question #17">Operation Torch
+            <span>A</span> <input type="radio" id="ans17" name="question #5">Operation Torch
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans18" name="question #18">Operation Overlord
+            <span>B</span> <input type="radio" id="ans18" name="question #5">Operation Overlord
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans19" name="question #19">Operation Sea Lion
+            <span>C</span> <input type="radio" id="ans19" name="question #5">Operation Sea Lion
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans20" name="question #20">Operation Barbarossa
+            <span>D</span> <input type="radio" id="ans20" name="question #5">Operation Barbarossa
         </div>
     </div>
     <br>
@@ -106,16 +142,16 @@
     6 <span><strong>Which battle is considered the turning point on the Eastern Front in WWII?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans21" name="question #21">Battle of Kursk
+            <span>A</span> <input type="radio" id="ans21" name="question #6">Battle of Kursk
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans22" name="question #22">Battle of Stalingrad
+            <span>B</span> <input type="radio" id="ans22" name="question #6">Battle of Stalingrad
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans23" name="question #23">Battle of Moscow
+            <span>C</span> <input type="radio" id="ans23" name="question #6">Battle of Moscow
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans24" name="question #24">Battle of Leningrad
+            <span>D</span> <input type="radio" id="ans24" name="question #6">Battle of Leningrad
         </div>
     </div>
     <br>
@@ -123,16 +159,16 @@
     7 <span><strong>What was the name of the treaty that ended World War I?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans25" name="question #25">Treaty of Paris
+            <span>A</span> <input type="radio" id="ans25" name="question #7">Treaty of Paris
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans26" name="question #26">Treaty of Versailles
+            <span>B</span> <input type="radio" id="ans26" name="question #7">Treaty of Versailles
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans27" name="question #27">Treaty of London
+            <span>C</span> <input type="radio" id="ans27" name="question #7">Treaty of London
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans28" name="question #28">Treaty of Rome
+            <span>D</span> <input type="radio" id="ans28" name="question #7">Treaty of Rome
         </div>
     </div>
     <br>
@@ -140,16 +176,16 @@
     8 <span><strong>Which leader was Prime Minister of Britain during most of WWII?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans29" name="question #29">Neville Chamberlain
+            <span>A</span> <input type="radio" id="ans29" name="question #8">Neville Chamberlain
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans30" name="question #30">Winston Churchill
+            <span>B</span> <input type="radio" id="ans30" name="question #8">Winston Churchill
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans31" name="question #31">Clement Attlee
+            <span>C</span> <input type="radio" id="ans31" name="question #8">Clement Attlee
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans32" name="question #32">Harold Macmillan
+            <span>D</span> <input type="radio" id="ans32" name="question #8">Harold Macmillan
         </div>
     </div>
     <br>
@@ -157,16 +193,16 @@
     9 <span><strong>What was the name of the U.S. project that developed the atomic bomb?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans33" name="question #33">Liberty Project
+            <span>A</span> <input type="radio" id="ans33" name="question #9">Liberty Project
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans34" name="question #34">Manhattan Project
+            <span>B</span> <input type="radio" id="ans34" name="question #9">Manhattan Project
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans35" name="question #35">Eagle Project
+            <span>C</span> <input type="radio" id="ans35" name="question #9">Eagle Project
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans36" name="question #36">Freedom Project
+            <span>D</span> <input type="radio" id="ans36" name="question #9">Freedom Project
         </div>
     </div>
     <br>
@@ -174,16 +210,16 @@
     10 <span><strong>Which two cities were hit with atomic bombs in 1945?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans37" name="question #37">Tokyo & Osaka
+            <span>A</span> <input type="radio" id="ans37" name="question #10">Tokyo & Osaka
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans38" name="question #38">Hiroshima & Nagasaki
+            <span>B</span> <input type="radio" id="ans38" name="question #10">Hiroshima & Nagasaki
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans39" name="question #39">Kyoto & Yokohama
+            <span>C</span> <input type="radio" id="ans39" name="question #10">Kyoto & Yokohama
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans40" name="question #40">Sapporo & Kobe
+            <span>D</span> <input type="radio" id="ans40" name="question #10">Sapporo & Kobe
         </div>
     </div>
     <br>
@@ -217,12 +253,7 @@ function CheckAnswers() {
 
    alert("Scored" + score + "/10")
 }
-
-
-
-
-
-
+    
 </script>
 
 </body>
