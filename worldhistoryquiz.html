@@ -36,7 +36,7 @@
     }
     
     #submit_button {
-    background-colour: #6b5f4c;
+    background-color: #6b5f4c;
     border-radius: 8px;
     padding: 10px 20px;
     font-size: 16px;
@@ -50,6 +50,21 @@
     #submit_button:hover {
     background-color: #4f4638;
   }
+  
+.correct {
+    background-color: #4CAF50;
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.wrong {
+    background-color: #d9534f;
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 </style>
 <body>
     <h1>World Wars History Quiz</h1>
@@ -244,15 +259,26 @@ function CheckAnswers() {
 
     let score = 0
 
-    CorrectAnswers.forEach(id => {
-        const radio = document.getElementById(id);
-        if (radio && radio.checked) {
-            score++;
+    document.querySelectorAll(".answer").forEach(div => {
+        div.classList.remove("correct");
+        div.classList.remove("wrong");
+    });
+
+    document.querySelectorAll(".answer").forEach(div => {
+        const input = div.querySelector("input");
+
+        if (input.checked) {
+            if (CorrectAnswers.includes(input.id)) {
+                div.classList.add("correct");
+                score++;
+            } else {
+                div.classList.add("wrong");
+            }
         }
     })
-
-   alert("Scored" + score + "/10")
 }
+ alert("Scored " + score + "/10")
+
     
 </script>
 

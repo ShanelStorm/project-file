@@ -15,12 +15,34 @@
     border: none;
     color: rgb(90, 33, 33);
     font-weight: bold;
+    background-color: aqua;
+    cursor: pointer;
+
   }
-  .body{
-    background-image: url(images/animebackground.png);
+
+  body{
+    background-image: url(images/animebackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
+  
+  .correct {
+    background-color: #4CAF50;
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.wrong {
+    background-color: #d9534f;
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+
   </style>
 
 
@@ -57,7 +79,7 @@
       <label for="q1_a3">
 
         <div id="q1_a3_div" class="answer">
-          <input type="radio" id="q1_a3" name="q1_option">
+          <input type="radio" id="q1_a3" name="q1_option" value="One Piece, Naruto, Bleach">
           <span>One Piece, Naruto, Bleach</span>
         </div>
 
@@ -95,7 +117,7 @@
 
       <label for="q2_a2">
       <div id="q2_a2_div" class="answer">
-        <input type="radio" id="q2_a2" name="q2_option">
+        <input type="radio" id="q2_a2" name="q2_option" value="Gohan">
         <span>Gohan</span>
       </div>
       </label>
@@ -143,7 +165,7 @@
 
   <label for="q3_a3">
     <div id="q3_a3_div" class="answer">
-      <input type="radio" id="q3_a3" name="q3_option">
+      <input type="radio" id="q3_a3" name="q3_option" value="Eiichiro Oda">
       <span>Eiichiro Oda</span>
     </div>
   </label>
@@ -177,8 +199,8 @@
   </label>
 
   <label for="q4_a2">
-    <div id="q4_21_div" class="answer">
-      <input type="radio" id="" name="q4_option">
+    <div id="q4_a2_div" class="answer">
+      <input type="radio" id="q4_a2" name="q4_option" value="Quirks">
       <span>Quirks</span>
     </div>
   </label>
@@ -218,7 +240,7 @@
 
   <label for="q5_a2">
     <div id="q5_a2_div" class="answer">
-      <input type="radio" id="q5_a2" name="q5_option">
+      <input type="radio" id="q5_a2" name="q5_option" value="Yuji Itadori">
       <span>Yuji Itadori</span>
     </div>
   </label>
@@ -252,7 +274,7 @@
 
   <label for="q6_a1">
     <div id="q6_a1_div" class="answer">
-      <input type="radio" id="q6_a1" name="q6_option">
+      <input type="radio" id="q6_a1" name="q6_option" value="Orihime Inoue">
       <span>Orihime Inoue</span>
     </div>
   </label>
@@ -300,7 +322,7 @@
 
   <label for="q7_a2">
     <div id="q7_a2_div" class="answer">
-      <input type="radio" id="q7_a2" name="q7_option">
+      <input type="radio" id="q7_a2" name="q7_option" value="Straw Hat Pirates">
       <span>Straw Hat Pirates</span>
     </div>
   </label>
@@ -335,7 +357,7 @@
 
   <label for="q8_a1">
     <div id="q8_a1_div" class="answer">
-      <input type="radio" id="q8_a1" name="q8_option">
+      <input type="radio" id="q8_a1" name="q8_option" value="Limitless">
       <span>Limitless</span>
     </div>
   </label>
@@ -391,7 +413,7 @@
 
   <label for="q9_a3">
     <div id="q9_a3_div" class="answer">
-      <input type="radio" id="q9_a3" name="q9_option">
+      <input type="radio" id="q9_a3" name="q9_option" value="Izuku Midoriya">
       <span>Izuku Midoriya</span>
     </div>
   </label>
@@ -450,30 +472,79 @@
 
 
 <!------------------------------------------------------------Q10 End---------------------------------------------------------------------------------------------------------->
-<input id="submit_button" type="button" value="submit" onclick="check_q10_answers">
+<button id="submit_button" onclick="CheckAnswers()">submit</button>
 
 
 <script> 
+
+
+function CheckAnswers() {
+
+    const CorrectAnswers = [
+        "q1_a3",
+        "q2_a2",
+        "q3_a3",
+        "q4_a2",
+        "q5_a2",
+        "q6_a1",
+        "q7_a2",
+        "q8_a1",
+        "q9_a3",
+        "q10_a1",
+    ];
+
+    let score = 0
+
+    CorrectAnswers.forEach(id => {
+        const radio = document.getElementById(id);
+        if (radio && radio.checked) {
+            score++;
+        }
+    })
+
+     document.querySelectorAll(".answer").forEach(div => {
+        div.classList.remove("correct");
+        div.classList.remove("wrong");
+    });
+
+    document.querySelectorAll(".answer").forEach(div => {
+        const input = div.querySelector("input");
+
+        if (input.checked) {
+            if (CorrectAnswers.includes(input.id)) {
+                div.classList.add("correct");
+                score++;
+            } else {
+                div.classList.add("wrong");
+            }
+        }
+    })
+
+  alert(score + "/10")
+
+
+}
+
+
+
 // in the array the answer going down in the array 
 
-let shounen_quiz_answers = ["One Piece, Naruto, Bleach", "Gohan", "Eiichiro Oda", "Quirks", "Yuji Itadori", "Orehime Inoue","Straw Hat Pirates", "Limitless","Izuku Midoriya", "Super Saiyan"];
+// let shounen_quiz_answers = ["One Piece, Naruto, Bleach", "Gohan", "Eiichiro Oda", "Quirks", "Yuji Itadori", "Orehime Inoue","Straw Hat Pirates", "Limitless","Izuku Midoriya", "Super Saiyan"];
 
-function check_q10_answers(){
+// function check_q10_answers(){
 
-// document.getElementsByName("q10_option");
-let score = 0;
-let q10_submissions = document.getElementsByName("q10_option");
+// // document.getElementsByName("q10_option");
+// let score = 0;
+// let q10_submissions = document.getElementsByName("q10_option");
 
-for (let i=0; i<10; i++){
-  if(q10_submissions[i].value === shounen_quiz_answers[i]){
-    score+1;
+// for (let i=0; i<10; i++){
+//   if(q10_submissions[i].value === shounen_quiz_answers[i]){
+//     score+1;
 
-  }
-}
+//   }
+// }
 
-alert(score);
-
-}
+// alert(score);
 
 </script>
 

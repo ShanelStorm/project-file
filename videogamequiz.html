@@ -6,7 +6,37 @@
     <title>Project Q - Video Game Quiz</title>
 </head>
 <style>
-    #submit_button{
+
+    body {
+        background: #222;
+        color:#fff;
+        font-family: "Press Start 2P", monospace;
+        padding: 20px;
+    }
+
+
+    h1 {
+        text-align: center;
+        font-size: 32px;
+        color: #00ff00;
+    }
+
+    .answer.container {
+        background: #333;
+        border: 3px solid #00ff00;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    .answer {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+
+    #submit_button {
+    background: #00ff00;
     border-radius: 8px;
     padding: 10px 20px;
     font-size: 16px;
@@ -14,6 +44,25 @@
     color: white;
     font-weight: bold;
   }
+
+  #submit_button:hover {
+    background-color: darkgreen;
+  }
+
+.correct {
+    background-color: #4CAF50;
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.wrong {
+    background-color: #d9534f;
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 </style>
 <body>
  
@@ -25,157 +74,157 @@
             <span>A</span> <input type="radio" id="ans1" name="question #1">Wario
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans2" name="question #2">Luigi
+            <span>B</span> <input type="radio" id="ans2" name="question #1">Luigi
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans3" name="question #3">Toad
+            <span>C</span> <input type="radio" id="ans3" name="question #1">Toad
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans4" name="question #4">Waluigi
+            <span>D</span> <input type="radio" id="ans4" name="question #1">Waluigi
         </div>
     </div>
     <br>
     2 <span><strong>Which Pokémon is known as the franchise mascot?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans5" name="question #5">Charizard
+            <span>A</span> <input type="radio" id="ans5" name="question #2">Charizard
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans6" name="question #6">Squirtle
+            <span>B</span> <input type="radio" id="ans6" name="question #2">Squirtle
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans7" name="question #7">Eevee
+            <span>C</span> <input type="radio" id="ans7" name="question #2">Eevee
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans8" name="question #8">Pikachu
+            <span>D</span> <input type="radio" id="ans8" name="question #2">Pikachu
         </div>
     </div>
     <br>
     3 <span><strong>In what year did the Nintendo Switch orignially debut?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans9" name="question #9">2015
+            <span>A</span> <input type="radio" id="ans9" name="question #3">2015
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans10" name="question #10">2018
+            <span>B</span> <input type="radio" id="ans10" name="question #3">2018
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans11" name="question #11">2017
+            <span>C</span> <input type="radio" id="ans11" name="question #3">2017
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans12" name="question #12">2019
+            <span>D</span> <input type="radio" id="ans12" name="question #3">2019
         </div>
     </div>
     <br>
 4 <span><strong>In Minecraft, what material do you need to build a Nether Portal?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans13" name="question #13">Obsidian
+            <span>A</span> <input type="radio" id="ans13" name="question #4">Obsidian
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans4" name="question #14">Diamonds
+            <span>B</span> <input type="radio" id="ans4" name="question #4">Diamonds
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans15" name="question #15">Coal
+            <span>C</span> <input type="radio" id="ans15" name="question #4">Coal
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans16" name="question #16">Waxed Weathered Cut Copper Stairs
+            <span>D</span> <input type="radio" id="ans16" name="question #4">Waxed Weathered Cut Copper Stairs
         </div>
     </div>
     <br>
 5 <span><strong>What s the name of Sonic the Hedgehog's sidekick></strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans17" name="question #17">Shadow
+            <span>A</span> <input type="radio" id="ans17" name="question #5">Shadow
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans18" name="question #18">Tails
+            <span>B</span> <input type="radio" id="ans18" name="question #5">Tails
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans19" name="question #19">Knuckles
+            <span>C</span> <input type="radio" id="ans19" name="question #5">Knuckles
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans20" name="question #20">Amy
+            <span>D</span> <input type="radio" id="ans20" name="question #5">Amy
         </div>
     </div>
     <br>
 6 <span><strong>Which of the following enemies is known for exploding players?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans21" name="question #21">Goomba
+            <span>A</span> <input type="radio" id="ans21" name="question #6">Goomba
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans22" name="question #22">Bokoblin
+            <span>B</span> <input type="radio" id="ans22" name="question #6">Bokoblin
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans23" name="question #23">Creeper
+            <span>C</span> <input type="radio" id="ans23" name="question #6">Creeper
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans24" name="question #24">Floraddin
+            <span>D</span> <input type="radio" id="ans24" name="question #6">Floraddin
         </div>
     </div>
     <br>
 7 <span><strong>Which of the following games won Game of the Year in 2025?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans25" name="question #25">Hollow Knight: Silksong
+            <span>A</span> <input type="radio" id="ans25" name="question #7">Hollow Knight: Silksong
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans26" name="question #26">Deltarune Chapter: 3+4
+            <span>B</span> <input type="radio" id="ans26" name="question #7">Deltarune Chapter: 3+4
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans27" name="question #27">Marvel Rivals 
+            <span>C</span> <input type="radio" id="ans27" name="question #7">Marvel Rivals 
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans28" name="question #28">Clair Obscur: Expedition 33
+            <span>D</span> <input type="radio" id="ans28" name="question #7">Clair Obscur: Expedition 33
         </div>
     </div>
     <br>
 8 <span><strong>Which of the following consoles does not feature an "Achievement" system?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans29" name="question #29">Playstation 5
+            <span>A</span> <input type="radio" id="ans29" name="question #8">Playstation 5
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans30" name="question #30">Nintendo Wii
+            <span>B</span> <input type="radio" id="ans30" name="question #8">Nintendo Wii
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans31" name="question #31">Xbox 360
+            <span>C</span> <input type="radio" id="ans31" name="question #8">Xbox 360
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans32" name="question #32">Steam Deck
+            <span>D</span> <input type="radio" id="ans32" name="question #8">Steam Deck
         </div>
     </div>
     <br>
 9 <span><strong>What is the name of the main character in the Metroid series?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans33" name="question #33">Samus Aran
+            <span>A</span> <input type="radio" id="ans33" name="question #9">Samus Aran
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans34" name="question #34">Ridley
+            <span>B</span> <input type="radio" id="ans34" name="question #9">Ridley
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans35" name="question #35">Gaster
+            <span>C</span> <input type="radio" id="ans35" name="question #9">Gaster
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans36" name="question #36">Dark Samus
+            <span>D</span> <input type="radio" id="ans36" name="question #9">Dark Samus
         </div>
     </div>
     <br>
 10 <span><strong>Which of the following game developers made the song Megalovania?</strong></span>
     <div class ="answer container">
         <div class="answer">
-            <span>A</span> <input type="radio" id="ans37" name="question #37">Atlus
+            <span>A</span> <input type="radio" id="ans37" name="question #10">Atlus
         </div>
         <div class="answer">
-            <span>B</span> <input type="radio" id="ans38" name="question #38">Santa Monica Studios
+            <span>B</span> <input type="radio" id="ans38" name="question #10">Santa Monica Studios
         </div>
         <div class="answer">
-            <span>C</span> <input type="radio" id="ans39" name="question #39">Toby Fox
+            <span>C</span> <input type="radio" id="ans39" name="question #10">Toby Fox
         </div>
         <div class="answer">
-            <span>D</span> <input type="radio" id="ans40" name="question #40">Bethesda
+            <span>D</span> <input type="radio" id="ans40" name="question #10">Bethesda
         </div>
     </div>
     <br>
@@ -184,6 +233,7 @@
 
 
 <script>
+    
 function CheckAnswers() {
 
     const CorrectAnswers=[
@@ -200,23 +250,33 @@ function CheckAnswers() {
 
 
     ]
+   
 
  let score = 0
 
-    CorrectAnswers.forEach(id => {
-        const radio = document.getElementById(id);
-        if (radio && radio.checked) {
-            score++;
+    document.querySelectorAll(".answer").forEach(div => {
+        div.classList.remove("correct");
+        div.classList.remove("wrong");
+    });
+
+    document.querySelectorAll(".answer").forEach(div => {
+        const input = div.querySelector("input");
+
+        if (input.checked) {
+            if (CorrectAnswers.includes(input.id)) {
+                div.classList.add("correct");
+                score++;
+            } else {
+                div.classList.add("wrong");
+            }
         }
     })
-
-   alert("Scored" + score + "/10")
-
+    
+     alert("Scored " + score + "/10")
 }
 
 
 </script>
-
 
 </body>
 </html>

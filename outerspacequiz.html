@@ -67,10 +67,25 @@
     border: none;
     color: white;
     font-weight: bold;
+    text-align:center;
+    background-color: darkblue;
+    cursor: pointer;
   }
   
 
-  
+  .correct {
+    background-color: #4CAF50;
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.wrong {
+    background-color: #d9534f;
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+}
 
 
 </style>
@@ -108,7 +123,7 @@
 
     <label for="q1_a2">
       <div id="q1_a2_div" class="answer">
-        <input type="radio" id="q1_a2" name="q1_option">
+        <input type="radio" id="q1_a2" name="q1_option" value="Jupiter">
         <span>Jupiter</span>
       </div>
     </label>
@@ -130,7 +145,7 @@
   </div>
 
 </div>
-
+<!------------------------------------------------------------------------------------------------------------------------->
 
 <div id="q2_total" class="total">
 
@@ -156,7 +171,7 @@
 
   <label for="q2_a3">
   <div id="q2_a3_div" class="answer">
-    <input type="radio" id="q2_a3" name="q2_option">
+    <input type="radio" id="q2_a3" name="q2_option" value="Distance">
     <span>Distance</span>
   </div>
   </label>
@@ -237,7 +252,7 @@
 
   <label for="q4_a3">
     <div id="q4_a3_div" class="answer">
-      <input type="radio" id="q4_a3" name="q4_option">
+      <input type="radio" id="q4_a3" name="q4_option" value="Supernova">
       <span>Supernova</span>
     </div>
   </label>
@@ -263,7 +278,7 @@
 
   <label for="">
     <div id="q5_a1_div" class="answer">
-      <input type="radio" id="q5_a1" name="q5_option">
+      <input type="radio" id="q5_a1" name="q5_option" value="Saturn">
       <span>Saturn</span>
     </div>
   </label>
@@ -310,7 +325,7 @@
 
   <label for="q6_a2">
     <div id="q6_a2_div" class="answer">
-      <input type="radio" id="q6_a2" name="q6_option">
+      <input type="radio" id="q6_a2" name="q6_option" value="Hydrogen and Helium">
       <span>Hydrogen and Helium</span>
     </div>
   </label>
@@ -357,7 +372,7 @@
 
   <label for="q7_a2">
     <div id="q7_a2_div" class="answer">
-      <input type="radio" id="q7_a3" name="q7_option">
+      <input type="radio" id="q7_a3" name="q7_option" value="Saturn">
       <span>Saturn</span>
     </div>
   </label>
@@ -431,14 +446,14 @@
 
   <label for="q9_a2">
     <div id="q9_a2_div" class="answer">
-      <input type="radio" id="q9_a2" name="q9_option">
+      <input type="radio" id="q9_a2" name="q9_option" value="Uranus">
       <span>Uranus</span>
     </div>
   </label>
 
   <label for="q9_a3">
     <div id="q9_a3_div" class="answer">
-      <input type="radio" id="q9_a3" name="q9_option">
+      <input type="radio" id="q9_a3" name="q9_option" >
       <span>Saturn</span>
     </div>
   </label>
@@ -464,7 +479,7 @@
 
   <label for="q10_a1">
     <div id="q10_a1_div" class="answer">
-      <input type="radio" id="q10_a1" name="q10_option">
+      <input type="radio" id="q10_a1" name="q10_option" value="Voyager 1">
       <span>Voyager 1</span>
     </div>
   </label>
@@ -494,14 +509,58 @@
 
 </div>
 </div>
-<button id="submit_button"></button>
-<!----------------------------------------------------next pg------------------------------------------------------------------------------------------------------->
+<button id="submit_button" onclick="CheckAnswers()" >Submit</button>
 
-
-
-
+<!----------------------------------------------------end------------------------------------------------------------------------------------------------------>
 
 <script>
+  function CheckAnswers() {
+
+    const CorrectAnswers = [
+        "q1_a2",
+        "q2_a3",
+        "q3_a3",
+        "q4_a3",
+        "q5_a1",
+        "q6_a2",
+        "q7_a2",
+        "q8_a1",
+        "q9_a2",
+        "q10_a1",
+    ];
+
+    let score = 0
+
+    CorrectAnswers.forEach(id => {
+        const radio = document.getElementById(id);
+        if (radio && radio.checked) {
+            score++;
+        }
+    })
+
+     document.querySelectorAll(".answer").forEach(div => {
+        div.classList.remove("correct");
+        div.classList.remove("wrong");
+    });
+
+    document.querySelectorAll(".answer").forEach(div => {
+        const input = div.querySelector("input");
+
+        if (input.checked) {
+            if (CorrectAnswers.includes(input.id)) {
+                div.classList.add("correct");
+                score++;
+            } else {
+                div.classList.add("wrong");
+            }
+        }
+    })
+
+  alert(score + "/10")
+
+
+}
+
 
 </script>
     
