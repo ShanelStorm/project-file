@@ -538,10 +538,10 @@
         }
     })
 
-     document.querySelectorAll(".answer").forEach(div => {
-        div.classList.remove("correct");
-        div.classList.remove("wrong");
-    });
+    //  document.querySelectorAll(".answer").forEach(div => {
+    //     div.classList.remove("correct");
+    //     div.classList.remove("wrong");
+    // });
 
     document.querySelectorAll(".answer").forEach(div => {
         const input = div.querySelector("input");
@@ -549,7 +549,7 @@
         if (input.checked) {
             if (CorrectAnswers.includes(input.id)) {
                 div.classList.add("correct");
-                score++;
+                
             } else {
                 div.classList.add("wrong");
             }
