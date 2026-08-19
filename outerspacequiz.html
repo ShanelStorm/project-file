@@ -429,7 +429,7 @@
 </div>
 
 
-<div id="q7_total" class="total">
+<div id="q9_total" class="total">
 
   <div class="questiondiv">
   <span><strong>9. Which planet is tilted so dramatically that it essentially rotates on its side?</strong></span>
@@ -516,6 +516,16 @@
 <script>
   function CheckAnswers() {
 
+    let questions = document.querySelectorAll(".total") 
+    console.log (questions.length)
+
+    for(const question of questions){
+      if (question.querySelectorAll("input:checked").length == 0){
+        alert ("Please answer all questions");
+        return;
+      }
+    }
+
     const CorrectAnswers = [
         "q1_a2",
         "q2_a3",
@@ -553,7 +563,9 @@
             } else {
                 div.classList.add("wrong");
             }
-        }
+         } 
+         
+         
     })
 
   alert(score + "/10")
