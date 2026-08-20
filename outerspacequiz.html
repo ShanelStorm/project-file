@@ -13,64 +13,107 @@
     box-sizing: border-box;
   }
 
-  .hidden {
-    display: none;
-  }
 
-  body{
-    background-image: url(images/spaceim3k.jpg);
-    background-repeat: no-repeat;
-
-  }
-
-  #first_screen{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow:auto;
-    background-repeat: no-repeat;
-    /* background-size: cover; */
+body {
+  height: 100vh;
+  background-image: url(images/spaceim3k.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif;
+  
+}
 
 
-  }
+#headerparent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 20px 10px;
+}
 
-  #headerparent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+#headerdiv {
+  text-align: center;
+  width: 400px;
+  padding: 15px 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #101542;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
 
-  #headerdiv{
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 5px;
-    width: 300px;
-    height: 50px;
-    background-color: aliceblue;
-    border-radius: 20px;
+#headerdiv h1 {
+  font-size: 30px;
+  letter-spacing: 1px;
+}
 
 
+.total {
+  display: flex;
+  flex-direction: column;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 15px;
+  width: 850px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #151936;
+  border-radius: 18px;
+  
+}
 
-  }
 
-  .total{
-    display: flex;
-    flex-direction: column;
-    margin: 10px 100px 0px 130px;
-    background-color: rgba(255, 255, 255, 0.459);
-  }
+.questiondiv {
+  margin-bottom: 18px;
+}
+
+.questiondiv strong {
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+
+.answer_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answer {
+  display: flex;
+  align-items: center;
+  padding: 13px 16px;
+  background-color: rgba(161, 119, 219, 0.171);
+  border-radius: 10px;
+  cursor: pointer;
+    font-size: 16px;
+
+}
+
+.answer input {
+  margin-right: 12px;
+  cursor: pointer;
+
+}
 
   #submit_button{
     border-radius: 8px;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     text-align:center;
-    background-color: darkblue;
+    background-color: rgb(224, 224, 228);
     cursor: pointer;
-  }
+    margin-left: 48%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  } 
+
+
+/* pg1 end*/
   
 
   .correct {
@@ -87,21 +130,75 @@
     padding: 5px;
 }
 
+/* ----------------------------------------------------POP-UP SECTION (YOU GUYS CAN COPY N PASTE) ------------------------------------------------------------------------------------------------------------------- */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup_content {
+  display:flex;
+  flex-direction: column;
+  background-color: white;
+  color:black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.popup_content button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color ease 0.14s;
+}
+
+.popup_content button:hover {
+  background-color:rgb(199, 199, 198);
+}
+
+.popup_content a {
+  background-color: rgb(135, 166, 250);
+  color: black;
+  text-decoration: none;
+  transition: background-color ease 0.14s;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.popup_content a:hover {
+  background-color:  rgb(109, 135, 209);
+
+}
+
 
 </style>
 
 
-
-
 <body>
 
-  <div>
+  
     <div id="headerparent">
     <div id="headerdiv">
     <h1>Outer Space Quiz</h1>
     </div>
     </div>
-  </div>
+  
 
 
 <div id="first_screen" class="visible">
@@ -370,8 +467,8 @@
     </div>
   </label>
 
-  <label for="q7_a2">
-    <div id="q7_a2_div" class="answer">
+  <label for="q7_a3">
+    <div id="q7_a3_div" class="answer">
       <input type="radio" id="q7_a3" name="q7_option" value="Saturn">
       <span>Saturn</span>
     </div>
@@ -508,14 +605,31 @@
  </div>
 
 </div>
+
 </div>
+<!-------------------------------------------------------------------------button------------------------------------------------------------------------------------------------>
 <button id="submit_button" onclick="CheckAnswers()" >Submit</button>
+
+
+<!---------------------------------------------------------------------POP-UP SECTION---------------------------------------------------------------------------------------------------->
+<div id="popup" class="popup">
+  <div class="popup_content">
+    <h2>Better luck next time!</h2>
+    <p>You scored less than 6/10. Check out our study resources and try again.</p>
+
+    <a href="resources.html"> Resources </a>
+
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
 
 <!----------------------------------------------------end------------------------------------------------------------------------------------------------------>
 
 <script>
   function CheckAnswers() {
 
+    // -----------------------------------------PREVENTS SUBMISSION WITH MISSING ANSWERS----------------------------------------------------------------------------------------------------
     let questions = document.querySelectorAll(".total") 
     console.log (questions.length)
 
@@ -526,6 +640,7 @@
       }
     }
 
+    // -------------------------------COLLECTION OF CORRECT ANSWERS AND SCORE ADDER-----------------------------------------------------------------------------------------------------------------------
     const CorrectAnswers = [
         "q1_a2",
         "q2_a3",
@@ -533,7 +648,7 @@
         "q4_a3",
         "q5_a1",
         "q6_a2",
-        "q7_a2",
+        "q7_a3",
         "q8_a1",
         "q9_a2",
         "q10_a1",
@@ -548,10 +663,7 @@
         }
     })
 
-    //  document.querySelectorAll(".answer").forEach(div => {
-    //     div.classList.remove("correct");
-    //     div.classList.remove("wrong");
-    // });
+// -------------------------------RIGHT OR WRONG COLOR CHANGE--------------------------------------------------------------------------------------
 
     document.querySelectorAll(".answer").forEach(div => {
         const input = div.querySelector("input");
@@ -564,13 +676,22 @@
                 div.classList.add("wrong");
             }
          } 
-         
-         
+               
     })
 
+  
+  // ------------------Score alert------------------------------------- 
   alert(score + "/10")
 
+  // ------------------Popup JS-----------------------------------------------------
+  if (score < 6){
+    document.getElementById("popup").style.display = "flex";
+  }
 
+}
+// -----------------------Close Pop-up----------------------------------------------
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
 }
 
 
