@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animal Facts Quiz</title>
 </head>
 <body>
 <style>
     * { 
-    margin: 0;
+    margin: 5px;
     padding: 0;
     box-sizing: border-box;
     }
@@ -27,6 +27,22 @@
         font-family: "Georgia", serif;
         padding: 20px;
     }
+#headerparent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #headerdiv{
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 5px;
+    width: 300px;
+    height: 50px;
+    background-color: forestgreen;
+    border-radius: 20px;
+  }
+
     .answer_container{
         border: 2px solid  #654321;
         border-radius: 10px;
@@ -65,22 +81,27 @@
     padding: 5px;
 }
 </style>
+<div>
+<div id="headerparent">
+<div id="headerdiv">
 <h1>Animal Facts</h1>
-
+</div>
+</div>
+</div>
     1<span><strong>How does a platapus have children?</strong></span>
 <div class="total">
     <div class="answer_container">
         <div class="answer">
-            <input type="radio" id="option1" name="question1"><span>A</span> Giving birth
+            <span>A</span><input type="radio" id="option1" name="question1"> Giving birth
         </div>
         <div class="answer">
-            <input type="radio" id="option2" name="question1"><span>B.</span> Laying eggs
+            <span>B</span><input type="radio" id="option2" name="question1"> Laying eggs
         </div>
         <div class="answer">
-            <input type="radio" id="option3" name="question1"><span>C</span> Both A and B
+            <span>C</span><input type="radio" id="option3" name="question1"> Both A and B
         </div>
         <div class="answer">
-            <input type="radio" id="option4" name="question1"><span>D</span> None of the above
+            <span>D</span><input type="radio" id="option4" name="question1"> None of the above
         </div>
     </div>
 </div>
@@ -90,16 +111,16 @@
  <div class="total">
     <div class="answer_container">
         <div class="answer">
-            <input type="radio" id="option5" name="question2"><span>A</span> Fish
+            <span>A</span><input type="radio" id="option5" name="question2"> Fish
         </div>
         <div class="answer">
-             <input type="radio" id="option6" name="question2"><span>B</span> Mammal
+             <span>B</span><input type="radio" id="option6" name="question2"> Mammal
         </div>
         <div class="answer">
-             <input type="radio" id="option7" name="question2"><span>C</span> Reptile
+             <span>C</span><input type="radio" id="option7" name="question2"> Reptile
         </div>
         <div class="answer">
-             <input type="radio" id="option8" name="question2"><span>D</span> Bird
+             <span>D</span><input type="radio" id="option8" name="question2"> Bird
         </div>
     </div>
 </div>
@@ -109,16 +130,16 @@
 <div class="total">
     <div class="answer_container">
         <div class="answer">
-            <input type="radio" id="option9" name="question3"><span>A</span> Great White Shark
+            <span>A</span><input type="radio" id="option9" name="question3"> Great White Shark
         </div>
         <div class="answer">
-            <input type="radio" id="option10" name="question3"><span>B</span> Blue Whale
+            <span>B</span><input type="radio" id="option10" name="question3"> Blue Whale
         </div>
         <div class="answer">
-            <input type="radio" id="option11" name="question3"><span>C</span> Humpback Whale
+            <span>C</span><input type="radio" id="option11" name="question3"> Humpback Whale
         </div>
         <div class="answer">
-        <input type="radio" id="option12" name="question3"><span>D</span> Pistol Shrimp
+        <span>D</span><input type="radio" id="option12" name="question3"> Pistol Shrimp
         </div>
     </div>
 </div>
@@ -128,16 +149,16 @@
 <div class="total">
     <div class="answer_container">
         <div class="answer">
-            <input type="radio" id="option13" name="question4"><span>A</span> Swan
+            <span>A</span><input type="radio" id="option13" name="question4"> Swan
         </div>
         <div class="answer">
-            <input type="radio" id="option14" name="question4"><span>B</span> Squirrel
+            <span>B</span><input type="radio" id="option14" name="question4"> Squirrel
         </div>
         <div class="answer">
-            <input type="radio" id="option15" name="question4"><span>C</span> Bat
+            <span>C</span><input type="radio" id="option15" name="question4"> Bat
         </div>
         <div class="answer">
-            <input type="radio" id="option16" name="question4"><span>D</span> Duck
+            <span>D</span><input type="radio" id="option16" name="question4"> Duck
         </div>
     </div>
 </div>
@@ -147,16 +168,16 @@
  <div class="total">
     <div class="answer_container">
         <div class="answer">
-           <input type="radio" id="option17" name="question5"><span>A</span> 1
+           <span>A</span><input type="radio" id="option17" name="question5"> 1
         </div>
         <div class="answer">
-            <input type="radio" id="option18" name="question5"><span>B</span> 2
+            <span>B</span><input type="radio" id="option18" name="question5"> 2
         </div>
         <div class="answer">
-            <input type="radio" id="option19" name="question5"><span>C</span> 3
+            <span>C</span><input type="radio" id="option19" name="question5"> 3
         </div>
         <div class="answer">
-            <input type="radio" id="option20" name="question5"><span>D</span> 4
+            <span>D</span><input type="radio" id="option20" name="question5"> 4
         </div>
     </div>
 </div>
@@ -166,16 +187,16 @@
 <div class="total">
     <div class="answer_container">
         <div class="answer">
-            <input type="radio" id="option21" name="question6"><span>A</span> 3
+            <span>A</span><input type="radio" id="option21" name="question6"> 3
         </div>
         <div class="answer">
-            <input type="radio" id="option22" name="question6"><span>B</span> 6
+            <span>B</span><input type="radio" id="option22" name="question6"> 6
         </div>
         <div class="answer">
-           <input type="radio" id="option23" name="question6"><span>C</span> 8
+          <span>C</span> <input type="radio" id="option23" name="question6"> 8
         </div>
         <div class="answer">
-            <input type="radio" id="option24" name="question6"><span>D</span> 9
+           <span>D</span> <input type="radio" id="option24" name="question6"> 9
         </div>
     </div>
 </div>
@@ -185,20 +206,20 @@
     <div class="total">
      <div class="answer_container">
      <div class="answer">
-    <input type="radio" id="option25" name="question7" value="Owl">
-    <label for="option25"><span>A</span> Owl</label>
+    <span>A</span><input type="radio" id="option25" name="question7" value="Owl">
+    <label for="option25"> Owl</label>
   </div>
   <div class="answer">
-    <input type="radio" id="option26" name="question7" value="Hummingbird">
-    <label for="option26"><span>B</span> Hummingbird</label>
+    <span>B</span><input type="radio" id="option26" name="question7" value="Hummingbird">
+    <label for="option26"> Hummingbird</label>
   </div>
   <div class="answer">
-    <input type="radio" id="option27" name="question7" value="Eagle">
-    <label for="option27"><span>C</span> Eagle</label>
+    <span>C</span><input type="radio" id="option27" name="question7" value="Eagle">
+    <label for="option27"> Eagle</label>
   </div>
   <div class="answer">
-    <input type="radio" id="option28" name="question7" value="Falcon">
-    <label for="option28"><span>D</span> Falcon</label>
+    <span>D</span><input type="radio" id="option28" name="question7" value="Falcon">
+    <label for="option28"> Falcon</label>
   </div>
 </div>
 </div>
@@ -208,35 +229,35 @@
 <div class="total">
     <div class="answer_container">
         <div class="answer">
-            <input type="radio" id="option29" name="question8"><span>A</span> Leaves
+            <span>A</span><input type="radio" id="option29" name="question8"> Leaves
         </div>
         <div class="answer">
-            <input type="radio" id="option30" name="question8"><span>B</span> Bamboo
+            <span>B</span><input type="radio" id="option30" name="question8"> Bamboo
         </div>
         <div class="answer">
-            <input type="radio" id="option31" name="question8"><span>C</span> Meat
+            <span>C</span><input type="radio" id="option31" name="question8"> Meat
         </div>
         <div class="answer">
-            <input type="radio" id="option32" name="question8"><span>D</span> Fruits
+            <span>D</span><input type="radio" id="option32" name="question8"> Fruits
         </div>
     </div>
 </div>
     <br><br>
 
-    9<span><strong>What animal is actually the kig of the jungle?</strong></span>
+    9<span><strong>What animal is actually the king of the jungle?</strong></span>
 <div class="total">
     <div class="answer_container">
         <div class="answer">
-           <input type="radio" id="option33" name="question9"><span>A</span> Lion
+           <span>A</span><input type="radio" id="option33" name="question9"> Lion
         </div>
         <div class="answer">
-             <input type="radio" id="option34" name="question9"><span>B</span> Cheeta
+             <span>B</span><input type="radio" id="option34" name="question9"> Cheeta
         </div>
         <div class="answer">
-             <input type="radio" id="option35" name="question9"><span>C</span> Panther
+             <span>C</span><input type="radio" id="option35" name="question9"> Panther
         </div>
         <div class="answer">
-             <input type="radio" id="option36" name="question9"><span>D</span> Tiger
+             <span>D</span><input type="radio" id="option36" name="question9"> Tiger
         </div>
     </div>
 </div>
@@ -246,16 +267,16 @@
 <div class="total">
     <div class="answer_container">
         <div class="answer">
-            <input type="radio" id="option37" name="question10"><span>A</span> A murder
+            <span>A</span><input type="radio" id="option37" name="question10"> A murder
         </div>
         <div class="answer">
-            <input type="radio" id="option38" name="question10"><span>B</span> A horde
+            <span>B</span><input type="radio" id="option38" name="question10"> A horde
         </div>
         <div class="answer">
-            <input type="radio" id="option39" name="question10"><span>C</span> A mob
+            <span>C</span><input type="radio" id="option39" name="question10"> A mob
         </div>
         <div class="answer">
-            <input type="radio" id="option40" name="question10"><span>D</span> All of the above
+            <span>D</span><input type="radio" id="option40" name="question10"> All of the above
         </div>
     </div>
 </div>
@@ -273,9 +294,9 @@ function CheckAnswers() {
         return;
       }
     }
-   }
+   
 
-        function CheckAnswers() {
+        
 
     const CorrectAnswers = [
         "option2",

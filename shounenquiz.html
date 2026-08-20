@@ -477,8 +477,17 @@
 
 <script> 
 
-
 function CheckAnswers() {
+
+   let questions = document.querySelectorAll(".total") 
+    console.log (questions.length)
+
+    for(const question of questions){
+      if (question.querySelectorAll("input:checked").length == 0){
+        alert ("Please answer all questions");
+        return;
+      }
+    }
 
     const CorrectAnswers = [
         "q1_a3",
@@ -513,7 +522,7 @@ function CheckAnswers() {
         if (input.checked) {
             if (CorrectAnswers.includes(input.id)) {
                 div.classList.add("correct");
-                score++;
+                
             } else {
                 div.classList.add("wrong");
             }
