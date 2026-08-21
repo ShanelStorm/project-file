@@ -6,16 +6,127 @@
     <title>Quizaria - Resources</title>
     <link rel="icon" type="image/png" href="images/Quizaria.png">
 </head>
+
+<style>
+
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+    padding-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(images/warmpaper.png);
+    color: black;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+p{
+    text-align:center;
+    margin-bottom: 24px;
+}
+
+#title{
+
+    width: 420px;
+    border-radius: 15px;
+    height: 50px;
+    background-image: url(images/cardboardbg.jpg);
+    padding: 5px;
+}
+
+#title_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.centering {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gridparent1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+   
+   
+}
+
+#gridparent2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+}
+   
+
+#gridparent1 div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.089);
+    width: 400px;
+    height: 400px;
+    
+}
+
+#gridparent2 div {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.089);
+    width: 400px;
+    height: 400px;
+    margin-bottom: 100px;
+    
+    
+}
+
+h2 {
+    margin-top: 0;
+    color: black;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+    margin: 8px 0;
+}
+
+a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+</style>
+
+
 <body>
-    <div>
+    <div id="title_container">
+    <div id="title">
     <h1> QUIZ RESOURCES PAGE </h1>
     </div>
+    </div>
 
     <div>
-        <p>This page provides links to resources which may help prepare you for each quiz, if you're that serious, of course. </p>
+        <p><strong>This page provides links to resources which may help prepare you for each quiz, if you're that serious, of course. </strong></p>
 
     </div>
 
+    <div class="centering">
     <div id="gridparent1">
 
         <div>
@@ -40,7 +151,6 @@
             <a href="https://en.wikipedia.org/wiki/Crow">Crow Wiki</a>
         </div>
 
-        <br>
 
         <div>
             <h2>Outer Space</h2>
@@ -48,8 +158,11 @@
             <a href="https://en.wikipedia.org/wiki/Spacecraft">Spacecraft Wiki</a>
             <a href="https://en.wikipedia.org/wiki/Star">Star Wiki</a>
         </div>
-        
-        <br>
+    </div>
+    </div>
+
+    <div class="centering">
+    <div id="gridparent2">
 
         <div>
             <h2>Video Games</h2>
@@ -57,7 +170,7 @@
             <a href=""></a>
             <a href=""></a>
         </div>
-        <br>
+  
 
         <div>
             <h2>Comic Books</h2>
@@ -70,14 +183,14 @@
             <a href="https://en.wikipedia.org/wiki/Jason_Todd">Jason Todd Wiki</a>
             <br>
             <a href="https://en.wikipedia.org/wiki/Superman">Superman Wiki</a>
-            <br>
+            <!-- <br>
             <a href="https://en.wikipedia.org/wiki/Captain_America%27s_shield">Captain America Wiki</a>
             <br>
             <a href="https://en.wikipedia.org/wiki/Ultron">Ultron Wiki</a>
             <br>
             <a href="https://en.wikipedia.org/wiki/Venom_(character)">Venom Wiki</a>
             <br>
-            <a href="https://en.wikipedia.org/wiki/Aquaman">Aquaman Wiki</a>
+            <a href="https://en.wikipedia.org/wiki/Aquaman">Aquaman Wiki</a> -->
         </div>
 
         <div>
@@ -90,6 +203,8 @@
         </div>
 
     </div>
+    </div>
+
     
 </body>
 </html>
