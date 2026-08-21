@@ -31,16 +31,14 @@
 }
 
 #res {
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     background-color: white;
-    background-image: url(images/minicrumple.png);
+    background-image: url(images/smolcrumple2.png);
     overflow: hidden;
-   
     text-align:center;
-
     width: 250px;
     height: 60px;
     align-self: center;
-
     border-radius: 20px;
     box-shadow: 7px 8px 10px rgba(9, 9, 34, 0.185);
     transition: ease 0.14s;
